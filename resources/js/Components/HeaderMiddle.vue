@@ -1,5 +1,7 @@
 <script setup>
 import { Link } from '@inertiajs/vue3';
+import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 </script>
 
 <template>
@@ -11,8 +13,10 @@ import { Link } from '@inertiajs/vue3';
             </Link>
             <form action="" class="flex">
                 <input type="text" name="product_name" id="product_name" placeholder="Поиск"
-                    class="border-2 border-solid border-[#e8e8e8] rounded-s-lg w-[450px] text-[14px]">
-                <button type="submit" class="rounded-e-lg bg-[#eb3e32] flex items-center px-2 text-white hover:bg-[#333131]">Найти</button>
+                    class="border-2 border-solid border-[#e8e8e8] rounded-s-lg w-[450px] text-[14px] border-r-0">
+                <button type="submit" class="rounded-e-lg bg-[#eb3e32] flex items-center px-2 text-white hover:bg-[#333131] w-[65px] justify-center">
+                    <FontAwesomeIcon :icon="faSearch" />
+                </button>
             </form>
             <div class="flex">
                 <div class="pr-4">Желаемое</div>
